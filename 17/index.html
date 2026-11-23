@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="bg">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Задача 17: HTML генератор</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="app">
+      <h1>Задача 17: HTML генератор</h1>
+      <select id="tag">
+        <option>h1</option>
+        <option>h2</option>
+        <option>p</option>
+        <option>button</option>
+        <option>div</option>
+      </select>
+      <input id="content" placeholder="Текст">
+      <input id="color" type="color" value="#ed2839">
+      <input id="size" type="number" value="24">
+      <button id="create">Създай</button>
+      <div id="output"></div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

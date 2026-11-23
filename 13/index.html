@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="bg">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Задача 13: Форма за регистрация</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="app">
+      <h1>Задача 13: Форма за регистрация</h1>
+      <form id="register" novalidate>
+        <label>Потребителско име
+          <input id="username">
+        </label>
+        <label>Имейл
+          <input id="email" type="email">
+        </label>
+        <label>Парола
+          <input id="password" type="password">
+        </label>
+        <label>Повтори парола
+          <input id="confirm" type="password">
+        </label>
+        <button>Регистрация</button>
+      </form>
+      <p id="errors" class="error"></p>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

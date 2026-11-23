@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="bg">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Задача 16: Таблица с редактиране</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="app">
+      <h1>Задача 16: Таблица с редактиране</h1>
+      <input id="name" placeholder="Име">
+      <input id="grade" type="number" min="2" max="6" step="0.01" placeholder="Оценка">
+      <button id="save">Запази</button>
+      <button id="sortAsc">↑ Оценка</button>
+      <button id="sortDesc">↓ Оценка</button>
+      <table>
+        <thead>
+          <tr>
+            <th>Име</th>
+            <th>Оценка</th>
+            <th>Действия</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

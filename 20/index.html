@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="bg">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Задача 20: Система за управление на ученици</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="app">
+      <h1>Задача 20: Система за управление на ученици</h1>
+      <input id="search" placeholder="Търси ученик...">
+      <input id="first" placeholder="Име">
+      <input id="last" placeholder="Фамилия">
+      <input id="class" placeholder="Клас">
+      <input id="grades" placeholder="Оценки: 5,6,4">
+      <button id="save">Добави/Запази</button>
+      <table>
+        <thead>
+          <tr>
+            <th>Име</th>
+            <th>Клас</th>
+            <th>Среден</th>
+            <th>Действия</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+      <div id="pages"></div>
+      <div id="stats" class="result"></div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
