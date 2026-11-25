@@ -3,7 +3,7 @@
 }
 
 body {
-  font: 16px Arial, sans-serif;
+  font: 16px/1.5 "Segoe UI", Arial, sans-serif;
   background: #f1f5fa;
   color: #172536;
   margin: 0;
@@ -14,16 +14,22 @@ body {
   max-width: 840px;
   margin: auto;
   background: #fff;
+  border: 1px solid #e3ebf3;
   border-radius: 14px;
   padding: 26px;
-  box-shadow: 0 8px 25px #20334a18;
+  box-shadow: 0 10px 28px rgba(32, 51, 74, 0.08);
 }
 
 h1 {
   font-size: 25px;
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e6edf5;
 }
 
 button {
+  font: inherit;
+  font-weight: 500;
   border: 0;
   border-radius: 6px;
   background: #0877ed;
@@ -31,19 +37,54 @@ button {
   padding: 10px 15px;
   margin: 5px;
   cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
 }
 
 button:hover {
   background: #0058b6;
 }
 
+button:active {
+  transform: translateY(1px);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 input,
 select {
+  font: inherit;
   border: 1px solid #bbc9d8;
   border-radius: 6px;
   padding: 10px;
   margin: 5px;
   max-width: 100%;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #0877ed;
+  box-shadow: 0 0 0 3px rgba(8, 119, 237, 0.14);
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: #0877ed;
+  cursor: pointer;
+}
+
+input[type="color"] {
+  width: 52px;
+  height: 42px;
+  padding: 3px;
+  vertical-align: middle;
+  cursor: pointer;
 }
 
 label {
@@ -55,11 +96,29 @@ label input {
   display: block;
 }
 
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin: 6px 0;
+}
+
+#tasks {
+  list-style: none;
+  padding-left: 0;
+}
+
 .result {
   padding: 14px;
   background: #e4f8e9;
+  border: 1px solid #c3ebd0;
   border-radius: 7px;
   margin-top: 12px;
+}
+
+.result:empty {
+  display: none;
 }
 
 .error {
@@ -82,6 +141,8 @@ label input {
   max-width: 100%;
   display: block;
   border-radius: 9px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 14px rgba(32, 51, 74, 0.12);
 }
 
 .squares {
@@ -94,6 +155,7 @@ label input {
 .squares > div {
   width: 50px;
   height: 50px;
+  border-radius: 6px;
 }
 
 .cards {
@@ -104,9 +166,16 @@ label input {
 
 .cards > div {
   border: 1px solid #d2dce7;
+  background: #fbfdff;
   padding: 14px;
   border-radius: 9px;
   min-width: 160px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cards > div:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(32, 51, 74, 0.08);
 }
 
 table {
@@ -122,8 +191,53 @@ td {
   text-align: left;
 }
 
+th {
+  background: #f3f7fb;
+  font-weight: 600;
+}
+
+tbody tr:nth-child(even) {
+  background: #f9fbfd;
+}
+
+tbody tr:hover {
+  background: #eef5fc;
+}
+
 #answers button {
   display: block;
   width: 100%;
   text-align: left;
+}
+
+#pages {
+  margin-top: 10px;
+}
+
+#red,
+#minus {
+  background: #e53935;
+}
+
+#red:hover,
+#minus:hover {
+  background: #c62828;
+}
+
+#green,
+#plus {
+  background: #2e9d57;
+}
+
+#green:hover,
+#plus:hover {
+  background: #227a43;
+}
+
+#reset {
+  background: #64748b;
+}
+
+#reset:hover {
+  background: #475569;
 }
